@@ -1,0 +1,118 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+src/.env
+api/.env
+web/.env.local
+*.env
+
+# Data
+data/
+src/data/
+data/*.csv
+data/*.json
+!data/seed_accounts.example.csv
+!data/keywords.example.json
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Telegram Sessions
+*.session
+telegram_session.session
+onchain_telegram.session
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Distribution
+build/
+dist/
+*.egg-info/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Project specific
+src/collectors/twitter_scraper/data/accounts.txt
+src/collectors/twitter_scraper/accounts.db
+src/accounts.db
+accounts.db
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+
+# Scripts outputs
+web/scripts/*.js.map
+scripts/*.pyc
+
+# Test files
+*.test.js
+*.spec.js
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Production
+/build
+/public/build
+
+# Reference repositories
+reference/makeBrain/

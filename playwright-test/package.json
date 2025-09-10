@@ -1,0 +1,29 @@
+{
+    "name": "mcp-playwright-client",
+    "version": "1.0.0",
+    "description": "MCP client for Playwright testing",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "tsx src/index.ts",
+        "clean": "rm -rf dist"
+    },
+    "keywords": [
+        "mcp",
+        "playwright",
+        "testing"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "1.17.5",
+        "eventsource": "^2.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "tsx": "^4.0.0",
+        "typescript": "^5.0.0"
+    }
+}
