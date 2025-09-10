@@ -15,7 +15,7 @@ export interface MCPResult {
 }
 
 export interface ConversationMessage {
-  role: 'system' | 'user' | 'assistant';
+  role: 'system' | 'user' | 'assistant' | 'tool';
   content: string;
   tool_calls?: any[];
   tool_call_id?: string;
@@ -123,7 +123,7 @@ export class MCPClient {
         const messages = [systemMessage, ...this.conversationHistory];
 
         const completion = await this.openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
+          model: 'gpt-4',
           messages: messages,
           tools: openaiTools,
           tool_choice: 'auto',
@@ -167,7 +167,7 @@ export class MCPClient {
               });
 
               this.conversationHistory.push({
-                role: 'user',
+                role: 'tool',
                 content: `도구 ${toolName} 실행 결과: ${toolResultText}`,
                 tool_call_id: toolCall.id,
               });
@@ -191,7 +191,7 @@ export class MCPClient {
               });
 
               this.conversationHistory.push({
-                role: 'user',
+                role: 'tool',
                 content: `도구 ${toolName} 실행 실패: ${error}`,
                 tool_call_id: toolCall.id,
               });
